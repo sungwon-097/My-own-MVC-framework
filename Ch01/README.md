@@ -1,4 +1,4 @@
--   나만의 MVC 프레임워크 만들기
+-   강의 소개
 
 ### 강의 목표
 
@@ -10,7 +10,7 @@
 
 -   java SDK(강의에선 11버전 사용)
 
-```cmd
+```c
 # java -version
 java version "17.0.1" 2021-10-19 LTS
 Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
@@ -32,5 +32,6 @@ Tomcat은 Servlet Interface 구현체이며 Servlet Container중 하나
 - Servlet : 클라이언트의 요청이 오면 기능을 수행하고 그 결과를 웹 브라우저에 돌려줌
     - Servlet Interface : Servlet관련 추상 메서드를 선언(init(), service()등)
     - Setvlet Container : Servlet의 라이프사이클을 관리(Clinet의 Request를 받아주고 Response할 수 있게, 웹 서버와 소켓을 만들어 통신함)
+
 */
 ```
