@@ -19,6 +19,7 @@ public class PasswordValidatorTest {
         assertThatCode(() -> PasswordValidator.validate("serverwizard"))
                 .doesNotThrowAnyException();
     }
+    // TDD 방식으로 테스트 코드 먼저 설계 후 main 코드 작성
 
     @DisplayName("비밀번호가 8자 미만, 12자 초과 일 경우 IllegalArgumentException 예외가 발생한다.")
     @ParameterizedTest
@@ -28,4 +29,5 @@ public class PasswordValidatorTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("비밀번호는 8~12자 사이여야 한다.");
     }
+    // 예외의 종류와 메시지 반환 확인
 }
