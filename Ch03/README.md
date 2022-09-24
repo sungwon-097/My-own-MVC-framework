@@ -50,3 +50,11 @@
 
 -   책임이 한 곳에 집중되어 있으면 절차지향, 분산되어 있다면 객체지향
 -   객체지향은 높은 응집도와 낮은 결합도를 가지고 있어서 유지보수에 유리하다고 볼 수 있음.
+
+### 3. 사칙연산 계산기 실습
+
+1. Calculator 클래스에서 NewArithmeticOperators에게 작업을 위임함
+   // [Calculator](/src/test/src/main/java/com/example/test/Calculator.java)
+2. NewArithmeticOperators는 각각 구현된 클래스로부터 작업을 수행함
+   // [Calculate/](/src/test/src/main/java/com/example/test/calculate/)
+3. PositiveNumber에서 인자 유효성 체크를 해줌, 각 구현체에선 PositiveNumber 타입의 인자를 받고 toInt() 메소드로 정수를 반환함(int->PositiveNumber->int)
