@@ -5,10 +5,10 @@
 -   JUnit5 : 자바 단위 테스팅 프레임워크
 -   AssertJ : 테스트 코드 가독성을 높여주는 자바 라이브러리
 -   테스트 코드를 작성하는 이유
-    1. 잘 작성된 코드는 문서화 역할을 함(@DisplayName() )[->ex](/src/test/src/test/java/com/example/test/PasswordValidatorTest.java)
-    2. 코드에 결함을 발견하기 위함 [->ex](/src/test/src/test/java/com/example/test/CorrectFixedPasswordGenerator.java)
+    1. 잘 작성된 코드는 문서화 역할을 함(@DisplayName() )[->ex](/src/test/src/test/java/com/example/test/passwordValidator/PasswordValidatorTest.java)
+    2. 코드에 결함을 발견하기 위함 [->ex](/src/test/src/test/java/com/example/test/passwordValidator/CorrectFixedPasswordGenerator.java)
     3. 리팩토링시 안정성 확보 -> 코드 중복을 제거하고 수정 용이성 향상
-    4. 테스트하기 쉬운 코드를 작성하다 보면 더 낮은 결합도를 가진 설계를 얻을 수 있음 [->ex](/src/test/src/main/java/com/example/test/User.java)
+    4. 테스트하기 쉬운 코드를 작성하다 보면 더 낮은 결합도를 가진 설계를 얻을 수 있음 [->ex](/src/test/src/main/java/com/example/test/passwordValidator/User.java)
 -   TDD
     -   Test Driven Development, 테스트 주도 개발
     -   프로덕션 코드보다 테스트 코드를 먼저 작성하는 개발 방법
@@ -21,7 +21,7 @@
 
 ### 1. 테스트 코드 실습
 
--   [Code](/src/test/src/)
+-   [Code](/src/test/src/test/java/com/example/test/passwordValidator/)
 
 ### 2. 객체지향 패러다임
 
@@ -53,8 +53,26 @@
 
 ### 3. 사칙연산 계산기 실습
 
-1. Calculator 클래스에서 NewArithmeticOperators에게 작업을 위임함
-   // [Calculator](/src/test/src/main/java/com/example/test/Calculator.java)
-2. NewArithmeticOperators는 각각 구현된 클래스로부터 작업을 수행함
-   // [Calculate/](/src/test/src/main/java/com/example/test/calculate/)
+1. Calculator 클래스에서 NewArithmeticOperators에게 작업을 위임함  
+   // [Calculator](/src/test/src/main/java/com/example/test/arithmeticCalculator/Calculator.java)
+2. NewArithmeticOperators는 각각 구현된 클래스로부터 작업을 수행함  
+   // [Calculate/](/src/test/src/main/java/com/example/test/arithmeticCalculator/calculate/)
 3. PositiveNumber에서 인자 유효성 체크를 해줌, 각 구현체에선 PositiveNumber 타입의 인자를 받고 toInt() 메소드로 정수를 반환함(int->PositiveNumber->int)
+
+### 4. 학점 계산기 실습
+
+1. 과목, 수강 학점, 평점이 필요함  
+   // [Course](/src/test/src/main/java/com/example/test/gradeCalculator/Course.java)
+2. 총 평점을 구하기 위해 총 수강 학점, 총 평점의 계산이 필요함, 이 리스트의 전체 합을 클래스로 구현  
+   // [Courses](/src/test/src/main/java/com/example/test/gradeCalculator/Courses.java)
+3. 추상화된 메소드로 표현 할 수 있게 되었음  
+   // [GradeCalculator](/src/test/src/main/java/com/example/test/gradeCalculator/GradeCalculator.java)
+
+### 5. 음식주문 프로세스 실습
+
+-   도메인을 구성하는 객체를 손님, 메뉴판, 요리, 요리사로 나눠 추상화함  
+     // [package](/src/test/src/main/java/com/example/test/customerOrder/)
+    -   메뉴는 메뉴 이름과 가격으로 구성됨 [MenuItem](/src/test/src/main/java/com/example/test/customerOrder/MenuItem.java)
+    -   메뉴판은 메뉴의 집합 [Menu](/src/test/src/main/java/com/example/test/customerOrder/Menu.java)
+    -   요리 또한 요리 이름과 가격으로 구성되나 메뉴와 동일한 형태를 띄고 있음 [Cook](/src/test/src/main/java/com/example/test/customerOrder/Cook.java)
+    -   요리사는 요리를 만듦 [Cooking](/src/test/src/main/java/com/example/test/customerOrder/Cooking.java)
