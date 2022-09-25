@@ -1,6 +1,6 @@
-package com.example.test.calculate;
+package com.example.test.arithmeticCalculator.calculate;
 
-import com.example.test.NewArithmeticOperator;
+import com.example.test.arithmeticCalculator.NewArithmeticOperator;
 
 public class DivisionOperator implements NewArithmeticOperator {
     @Override

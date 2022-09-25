@@ -1,7 +1,6 @@
-package com.example.test;
+package com.example.test.arithmeticCalculator;
 
-import com.example.test.calculate.PositiveNumber;
-import org.junit.jupiter.api.Test;
+import com.example.test.arithmeticCalculator.calculate.PositiveNumber;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

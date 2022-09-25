@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.passwordValidator;
 
 import org.passay.CharacterData;
 import org.passay.CharacterRule;

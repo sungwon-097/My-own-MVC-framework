@@ -1,8 +1,6 @@
-package com.example.test;
+package com.example.test.arithmeticCalculator;
 
-import com.example.test.calculate.PositiveNumber;
-
-import java.util.Arrays;
+import com.example.test.arithmeticCalculator.calculate.PositiveNumber;
 
 public interface NewArithmeticOperator {
     boolean supports(String operator);

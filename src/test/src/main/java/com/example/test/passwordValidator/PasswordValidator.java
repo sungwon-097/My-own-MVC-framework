@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.passwordValidator;
 
 public class PasswordValidator {
     public static void validate(String password) {

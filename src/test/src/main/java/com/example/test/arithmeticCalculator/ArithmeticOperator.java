@@ -1,6 +1,4 @@
-package com.example.test;
-
-import com.example.test.calculate.PositiveNumber;
+package com.example.test.arithmeticCalculator;
 
 import java.util.Arrays;
 
