@@ -1,6 +1,6 @@
-package com.example.test;
+package com.example.test.arithmeticCalculator;
 
-import com.example.test.calculate.*;
+import com.example.test.arithmeticCalculator.calculate.*;
 
 import java.util.List;
 

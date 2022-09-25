@@ -1,4 +1,6 @@
-package com.example.test;
+package com.example.test.passwordValidator;
+
+import com.example.test.passwordValidator.PasswordGenerator;
 
 public class User {
 

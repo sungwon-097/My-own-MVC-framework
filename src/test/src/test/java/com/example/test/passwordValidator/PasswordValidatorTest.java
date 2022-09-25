@@ -1,5 +1,6 @@
-package com.example.test;
+package com.example.test.passwordValidator;
 
+import com.example.test.passwordValidator.PasswordValidator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
