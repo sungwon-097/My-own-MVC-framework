@@ -16,4 +16,5 @@ public class CookingTest {
 
         assertThat(cook).isEqualTo(new Cook("돈까스", 5000));
     }
+
 }
