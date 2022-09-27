@@ -15,9 +15,10 @@ import static org.assertj.core.api.Assertions.assertThatCode;
 
 public class PasswordValidatorTest {
     @DisplayName("비밀번호가 최소 8자 이상, 12자 이하면 예외가 발생하지 않는다")
-    @Test
-    void validatePasswordTest() {
-        assertThatCode(() -> PasswordValidator.validate("serverwizard"))
+    @ParameterizedTest
+    @ValueSource(strings = {"123123123"})
+    void validatePasswordTest(String password) {
+        assertThatCode(() -> PasswordValidator.validate(password))
                 .doesNotThrowAnyException();
     }
     // TDD 방식으로 테스트 코드 먼저 설계 후 main 코드 작성
