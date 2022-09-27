@@ -15,4 +15,5 @@ public class Menu {
                 .findFirst()
                 .orElseThrow(()-> new IllegalArgumentException("잘못된 메뉴 이름입니다"));
     }
+
 }

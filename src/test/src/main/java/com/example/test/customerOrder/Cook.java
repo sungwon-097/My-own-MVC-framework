@@ -16,7 +16,6 @@ public class Cook {
         this.price = menuItem.getPrice();
     }
 
-    // 다른 클래스의 객체 값을 비교 할 때는 control+Enter 후 equals() and hashCode() 재정의
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

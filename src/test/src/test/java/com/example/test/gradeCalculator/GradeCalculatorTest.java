@@ -22,10 +22,10 @@ public class GradeCalculatorTest {
     @Test
     void calculateGradeTest(){
         List<Course> courses = List.of(new Course("OOP", 3, "A+"),
-                new Course("DS", 3, "A+"));
+                new Course("DS", 3, "C+"));
         GradeCalculator gradeCalculator = new GradeCalculator(courses);
         double gradeResult = gradeCalculator.calculateGrade();
 
-        assertThat(gradeResult).isEqualTo(4.5);
+        assertThat(gradeResult).isEqualTo(3.5);
     }
 }
