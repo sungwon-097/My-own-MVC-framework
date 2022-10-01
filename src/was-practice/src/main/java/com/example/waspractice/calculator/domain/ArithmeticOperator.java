@@ -1,4 +1,4 @@
-package com.example.test.arithmeticCalculator;
+package com.example.waspractice.calculator.domain;
 
 import java.util.Arrays;
 

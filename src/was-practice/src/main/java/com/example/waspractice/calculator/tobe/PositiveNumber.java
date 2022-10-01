@@ -1,4 +1,4 @@
-package com.example.test.arithmeticCalculator.calculate;
+package com.example.waspractice.calculator.tobe;
 
 public class PositiveNumber {
 

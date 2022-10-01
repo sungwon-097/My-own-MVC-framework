@@ -1,6 +1,6 @@
-package com.example.test.arithmeticCalculator;
+package com.example.waspractice.calculator.domain;
 
-import com.example.test.arithmeticCalculator.calculate.PositiveNumber;
+import com.example.waspractice.calculator.tobe.PositiveNumber;
 
 public interface NewArithmeticOperator {
     boolean supports(String operator);
