@@ -1,6 +1,7 @@
-package com.example.test.arithmeticCalculator;
+package com.example.waspractice.calculator.domain;
 
-import com.example.test.arithmeticCalculator.calculate.*;
+
+import com.example.waspractice.calculator.tobe.*;
 
 import java.util.List;
 

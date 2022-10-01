@@ -1,6 +1,7 @@
-package com.example.test.arithmeticCalculator.calculate;
+package com.example.waspractice.calculator.tobe;
 
-import com.example.test.arithmeticCalculator.NewArithmeticOperator;
+
+import com.example.waspractice.calculator.domain.NewArithmeticOperator;
 
 public class SubtractionOperator implements NewArithmeticOperator {
     @Override
