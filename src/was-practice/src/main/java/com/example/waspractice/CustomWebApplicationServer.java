@@ -9,6 +9,8 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CustomWebApplicationServer {
 
@@ -18,6 +20,8 @@ public class CustomWebApplicationServer {
     public CustomWebApplicationServer(int port) {
         this.port = port;
     }
+
+    private final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     public void start() throws IOException {
         try(ServerSocket serverSocket = new ServerSocket(port)){
@@ -31,9 +35,12 @@ public class CustomWebApplicationServer {
 
 //              Step 2. 사용자 요청이 새로 들어 올 때 마다 Thread 를 따로 생성해서 사용자 요청을 처리하도록 한다.
 //              clientSocket 을 통해 I/O stream 을 진행
-                new Thread(new ClientRequestHandler(clientSocket)).start();
+//                new Thread(new ClientRequestHandler(clientSocket)).start();
 
-//                Step 1. 사용자 요청을 메인쓰레드가 처리하도록 한다
+//              Step 3. Thread Pool 을 적용
+                executorService.execute(new ClientRequestHandler(clientSocket));
+
+//              Step 1. 사용자 요청을 메인쓰레드가 처리하도록 한다
 //                try(InputStream in = clientSocket.getInputStream();
 //                    OutputStream out = clientSocket.getOutputStream()){
 //                        BufferedReader br = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
