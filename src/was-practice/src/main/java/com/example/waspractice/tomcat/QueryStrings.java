@@ -1,4 +1,4 @@
-package com.example.waspractice;
+package com.example.waspractice.tomcat;
 
 import java.util.ArrayList;
 import java.util.Arrays;

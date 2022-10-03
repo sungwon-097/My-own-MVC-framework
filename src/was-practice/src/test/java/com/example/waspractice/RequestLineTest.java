@@ -1,9 +1,8 @@
 package com.example.waspractice;
 
-import javafx.beans.binding.Bindings;
+import com.example.waspractice.tomcat.RequestLine;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RequestLineTest {

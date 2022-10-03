@@ -1,4 +1,4 @@
-package com.example.waspractice.counter;
+package com.example.waspractice.tomcat.counter;
 
 public class RaceConditionDemo
 {

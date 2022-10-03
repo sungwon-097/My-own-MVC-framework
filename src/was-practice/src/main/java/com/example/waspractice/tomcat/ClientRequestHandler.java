@@ -1,4 +1,4 @@
-package com.example.waspractice;
+package com.example.waspractice.tomcat;
 
 import com.example.waspractice.calculator.domain.Calculator;
 import com.example.waspractice.calculator.tobe.PositiveNumber;
