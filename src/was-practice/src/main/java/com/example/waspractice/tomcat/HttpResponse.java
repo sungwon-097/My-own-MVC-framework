@@ -1,4 +1,4 @@
-package com.example.waspractice;
+package com.example.waspractice.tomcat;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

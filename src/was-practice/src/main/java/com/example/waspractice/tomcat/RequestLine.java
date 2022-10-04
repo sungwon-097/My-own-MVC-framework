@@ -1,4 +1,4 @@
-package com.example.waspractice;
+package com.example.waspractice.tomcat;
 
 //"GET http://localhost:8080/calculate?operand1=11&operand2=55 HTTP/1.1"
 //method : GET

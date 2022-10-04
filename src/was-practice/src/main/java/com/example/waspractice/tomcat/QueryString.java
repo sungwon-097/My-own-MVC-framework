@@ -1,4 +1,4 @@
-package com.example.waspractice;
+package com.example.waspractice.tomcat;
 
 public class QueryString {
     private final String key;
