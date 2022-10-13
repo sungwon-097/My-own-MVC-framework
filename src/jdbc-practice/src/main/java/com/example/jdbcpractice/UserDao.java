@@ -6,7 +6,7 @@ import static com.example.jdbcpractice.ConnectionManager.getConnection;
 
 public class UserDao {
 
-    public User executeQuery(String userid) throws SQLException{
+    public User findByUserId(String userid) throws SQLException{
         Connection con = null;
         PreparedStatement pstamt = null;
         ResultSet rs = null;
@@ -42,7 +42,7 @@ public class UserDao {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         String sql = "INSERT INTO USERS VALUES (?,?,?,?)";
-        jdbcTemplate.executeUpdate(user, sql, pstamt -> {
+        jdbcTemplate.executeQuery(user, sql, pstamt -> {
             pstamt.setString(1, user.getUserid());
             pstamt.setString(2, user.getPassword());
             pstamt.setString(3, user.getName());
