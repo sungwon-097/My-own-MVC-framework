@@ -6,6 +6,6 @@
     -   Ch03. [객체지향 패러다임](/Ch03/README.md)
     -   Ch04. [웹 어플리케이션의 이해](/Ch04/README.md)
     -   Ch05. [JDBC 프로그래밍](/Ch05/README.md)
-    -   Ch06. MVC 프레임워크 만들기
+    -   Ch06. [MVC 프레임워크 만들기](/Ch06/README.md)
     -   Ch07. DI 프레임워크 만들기
     -   Ch08. Spring Boot 코드 분석
