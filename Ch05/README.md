@@ -20,3 +20,4 @@
 
 -   커넥션을 획득 하기 위한 표준 인터페이스
 -   HikariCP의 Datasource를 사용한다
+-   MAX_POOL_SIZE는 40
