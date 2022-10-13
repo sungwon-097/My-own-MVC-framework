@@ -2,20 +2,9 @@ package com.example.jdbcpractice;
 
 import java.sql.*;
 
+import static com.example.jdbcpractice.ConnectionManager.getConnection;
+
 public class UserDao {
-
-    private Connection getConnection(){
-        String url = "jdbc:h2:mem://localhost/~/jdbc-practice;MODE=MySQL;DB_CLOSE_DELAY=-1";
-        String id = "sa";
-        String pw = "";
-
-        try{
-            Class.forName("org.h2.Driver");
-            return DriverManager.getConnection(url, id, pw);
-        }catch (Exception ex){
-            return null;
-        }
-    }
 
     public User findByUserId(String userid) throws SQLException{
         Connection con = null;
@@ -50,28 +39,14 @@ public class UserDao {
     }
 
     public void create(User user) throws SQLException {
-        Connection con = null;
-        PreparedStatement pstamt = null;
 
-        try{
-            con = getConnection();
-            String sql = "INSERT INTO USERS VALUES (?,?,?,?)";
-            assert con != null;
-
-            pstamt = con.prepareStatement(sql);
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        String sql = "INSERT INTO USERS VALUES (?,?,?,?)";
+        jdbcTemplate.executeUpdate(user, sql, pstamt -> {
             pstamt.setString(1, user.getUserid());
             pstamt.setString(2, user.getPassword());
             pstamt.setString(3, user.getName());
             pstamt.setString(4, user.getEmail());
-
-            pstamt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            if (pstamt != null)
-                pstamt.close();
-            if (con != null)
-                con.close();
-        }
+        });
     }
 }
