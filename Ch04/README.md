@@ -104,6 +104,7 @@ public class CustomWebApplicationServer {
 -   웹서버와 소켓을 만들고 통신하는 과정을 대신 처리해준다 -> 비즈니스 로직에만 집중 할 수 있게 해준다
 -   싱클톤으로 서블릿 객체를 관리한다(인스턴스 하나만 생성하여 공유)
     -   stateful 하게 설계하면 안된다 -> Thread safeful 하지 않기 때문
+-   [실습코드](/src/was-practice/)
 
 ### WAS
 
