@@ -7,11 +7,13 @@
 -   주로 프레임워크 또는 라이브러리 개발 시 사용됨
 -   Spring Boot의 DI, JUnit, Jackson등에서 reflection 사용
 -   @Controller 가 설정된 모든 클래스를 찾아 출력하는 방식으로 실습함
+-   [실습코드](/src/reflection-practice/)
 
 ### Front Controller 패턴
 
 -   모든 요청을 단일 핸들러애서 처리하도록 하는 패턴(중앙처리 매커니즘) : 모든 요청을 받아 적절한 컨트롤러로 넘겨줌
 -   스프링 웹 MVC 프레임워크의 DispatcherServlet이 프런트컨트롤러 패턴으로 구현 돼있음
+-   [실습코드](/src/frontController-practice/)
 
 ### Forward VS Redirect
 
@@ -31,3 +33,20 @@
 ```java
     res.sendRedirect();
 ```
+
+### MVC Framework
+
+1. Request 가 들어오면 DispatcherServlet(Front Controller) 가 해당 요청을 받아 핸들러에 넘겨줌
+2. Handler Adapter 를 통해 요청에 적절한 Controller 를 실행
+3. Controller 는 해당 Viewname 반환
+4. DispatcherServlet 은 ViewResolver를 통해 해당하는 view 를 반환
+5. View 를 Response 로 반환
+
+-   Annotation 기반 Framework
+
+    -   DispatcherServlet
+    -   AnnotationHandlerMapping
+    -   HandlerAdapter
+    -   ViewResolver
+
+-   [실습코드](/src/mvc-practice/)
